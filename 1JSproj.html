@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        button{
+            Background-color: black ;
+            color: #00ff00;
+            font-family: monospace;
+            font-size: 16px;
+
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+
+
+            padding: 10px 20px;
+            cursor: pointer;  
+            
+            box-shadow: 0 0 10px #00ff00;
+            transition: 0.2s;
+                    }
+    button:hover{
+        background-color: #00ff00;
+        color: black;
+        box-shadow: 0 0 20px #00ff00;
+
+    }
+    button:active{
+        transform: scale(0.95);
+    }
+
+
+
+</style>
+    </head>
+
+    <body>
+        <h1> My first JS project</h1>
+        <h3>This project includes one button can show my info shortly</h3>
+        <p id = "demo"></p>
+        <button type =  "button" onclick="showInfo(demo)">Cick me</button>
+        <script>
+            const name = 'Rashith Zaheer';
+            const country = 'Srilankan';
+            const work = 'L1 & L2 IT support'
+            const Current_ip = '192.168.1.1'
+            const Work_Location = "Doha, Qatar"
+            const Geocordinates = "25.426621, 51.451201";
+            
+            function showInfo() {
+                document.getElementById("demo").innerHTML =
+                "<ol>" + 
+                "<li>Name: " + name + "</li>" + 
+                "<li>Country: " + country + "</li>" + 
+                "<li>Work: " + work + "</li>" + 
+                "<li>IP_info: " + Current_ip + "</li>" +
+                "<li>Work in: " + Work_Location + "</li>" + 
+                "<li>Geo location: " + Geocordinates + "</li>" +
+                "</ol>";
+            }
+        </script>
+
+    </body>
+    </html>
